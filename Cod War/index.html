@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <h1 id="header"></h1>
+
+    <script>
+
+        const message = 'Hello world' // Try edit me
+
+        // function litres(time) {
+        //     return Math.floor(time / 2);
+        // }
+
+        function oddOrEven(data) {
+            var ab = [].concat((data));
+            if (ab.length === 0) {
+                return "even";
+            } else {
+                var result = ab.reduce((acc, vel) => acc + vel);
+                var dataasda = (result > 0) ? "b" : "ass";
+                return (result % 2) ? "even" : "odd";
+            }
+
+        }
+
+        function oddOrEven2(data) {
+            return data.reduce((acc, vel) => acc + vel, 0) % 2 ? 'odd' : 'even';
+        }
+
+        function century(year) {
+            return (year < 100) ? 1 : (Math.floor(year / 100) + ((year % 100) ? 1 : 0));
+        }
+
+        function century2(year) {
+            return Math.ceil(year / 100);
+        }
+
+        function descendingOrder(n) {
+            let a = "" + n;
+            return a.split('').sort().reverse().join('');
+        }
+
+        function isIsogram(str) {
+            var a = String(str).toLowerCase().split('');
+            var result = true;
+            a.forEach(element => {
+                let ab = a.filter(a => a == element);
+                if (ab.length > 1) {
+                    result = false
+                }
+            });
+            return result;
+        }
+
+        function isIsogram2(str) {
+            var a = String(str).toLowerCase().split('');
+            var data = new Set(a); //mengambil nilai unik saja
+            var result = true;
+            if (result.length != a.length) {
+                result = false;
+            }
+            return result;
+        }
+
+        function repeatStr(n, s) {
+            return s.repeat(n); //perulangan
+        }
+
+
+        function isIsogram3(str) {
+            return !/(\w).*\1/i.test(str)
+        }
+
+
+        function ab() {
+            // debugger;
+            var a = "How can mirrors be real if our eyes aren't real";
+            var ab = a.split(' ');
+            var result = ab.map(a => a.charAt(0).toUpperCase() + a.slice(1)).join(" ");
+            return result;
+        }
+
+        function lovefunc(flower1, flower2) {
+            if (flower1 % 2 == flower2 % 2) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function longest(s1, s2) {
+            return Array.from(new Set(s1 + s2)).sort().join("");
+        }
+
+        function sumMix(x) {
+            return x.map(a => parseInt(a)).reduce((acc, val) => acc + val);
+        }
+
+        function expandedForm(num) {
+            for(let i = 0; i > num.length; i--){
+                if(num[i] != 0){
+
+                }
+            }
+        }
+
+
+        console.log(sumMix([9, 3, '7', '3']));
+        // console.log(longest("aaasskdffladqwrq", "bmnbasdbusasa"));
+
+        //console.log(lovefunc(0, 0));
+
+        // console.log(ab());
+
+        // console.log(isIsogram3("moOse"));
+        // console.log(descendingOrder(1021));
+
+        // console.log(oddOrEven2([0, 1, 5]));
+        document.querySelector('#header').innerHTML = message
+
+        console.log(message)
+
+
+
+
+    </script>
+</body>
+
+</html>
